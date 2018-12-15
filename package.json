@@ -14,12 +14,16 @@
     "React",
     "boilerplate",
     "Redux",
-    "React-r\u001b[23Router\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[r\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+    "React Router"
   ],
   "author": "Rahul N",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RahulNagaraj/react-app-boilerplate/issues"
   },
-  "homepage": "https://github.com/RahulNagaraj/react-app-boilerplate#readme"
+  "homepage": "https://github.com/RahulNagaraj/react-app-boilerplate#readme",
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-plugin-react": "^7.11.1"
+  }
 }
