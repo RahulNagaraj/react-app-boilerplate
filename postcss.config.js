@@ -1,6 +1,6 @@
 module.exports = {
   ident: 'postcss', // Necessary for external CSS imports to work
-  parser: 'sugarss',
+  parser: false,
   plugins: {
     'postcss-preset-env': {
       autoprefixer: {
