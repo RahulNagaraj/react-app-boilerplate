@@ -2,8 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Simplifies creation of HTML files to serve your webpack bundles
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // Plugin to remove your build folder(s) before building
-const InterpolateHtmlPlugin = require('interpolate-html-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const InterpolateHtmlPlugin = require('interpolate-html-plugin'); // To interpolate env variables into html
+const ManifestPlugin = require('webpack-manifest-plugin'); // To get manifest.json
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
