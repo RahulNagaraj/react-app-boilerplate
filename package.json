@@ -1,0 +1,25 @@
+{
+  "name": "react-app-boilerplate",
+  "version": "1.0.0",
+  "description": "My version boilerplate for react apps. Includes react-router and redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulNagaraj/react-app-boilerplate.git"
+  },
+  "keywords": [
+    "React",
+    "boilerplate",
+    "Redux",
+    "React-r\u001b[23Router\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[r\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+  ],
+  "author": "Rahul N",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RahulNagaraj/react-app-boilerplate/issues"
+  },
+  "homepage": "https://github.com/RahulNagaraj/react-app-boilerplate#readme"
+}
