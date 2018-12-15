@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -8,7 +9,9 @@ module.exports = {
     hot: true, // Hot Module Replacement
     port: 8080 // Port to run on
   },
-  entry: path.normalize('./src/index.js'), // entry point to app
+  entry: {
+    app: './src/index.js' // Entry point to the app
+  },
   mode: 'development',
   module: {
     rules: [
@@ -28,9 +31,15 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: 'body', // Inject assets into the body
+      template: './src/index.html' // Template to render
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
   output: {
-    path: path.resolve(__dirname, 'dist'), // output to /dist
-    filename: '[name].js' // output filename - index.js
+    path: path.resolve(__dirname, 'dist'), // Output to /dist
+    filename: '[name].bundle.js' // Output filename - index.bundle.js
   }
 };
