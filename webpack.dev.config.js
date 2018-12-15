@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // Simplifies creation of HTML files to serve your webpack bundles
+const CleanWebpackPlugin = require('clean-webpack-plugin'); // Plugin to remove your build folder(s) before building
 
 module.exports = {
   devServer: {
@@ -32,6 +33,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       inject: 'body', // Inject assets into the body
       template: './src/index.html' // Template to render
