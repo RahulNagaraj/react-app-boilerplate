@@ -8,7 +8,22 @@ module.exports = {
     filename: '[name].js' // output filename - index.js
   },
   module: {
-    rules: [{}]
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              import: true,
+              sourceMap: true,
+              url: true
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
   mode: 'development'
