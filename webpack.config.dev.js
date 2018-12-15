@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Simplifies creation of HTML files to serve your webpack bundles
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // Plugin to remove your build folder(s) before building
+const InterpolateHtmlPlugin = require('interpolate-html-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -154,6 +156,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: 'body', // Inject assets into the body
       template: path.join(__dirname, 'public/index.html') // Template to render
+    }),
+    new InterpolateHtmlPlugin({
+      PUBLIC_URL: process.env.PUBLIC_URL || publicUrl
+    }),
+    new ManifestPlugin({
+      fileName: 'manifest.json',
+      publicPath: publicPath
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
