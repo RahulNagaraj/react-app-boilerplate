@@ -1,9 +1,9 @@
 import React from 'react';
+import Header from './Layout/Header';
 
 const App = () => (
-  <>
-    <p>Welcome !!!</p>
-    <p>Hello</p>
-  </>
+  <div>
+    <Header />
+  </div>
 );
 export default App;
