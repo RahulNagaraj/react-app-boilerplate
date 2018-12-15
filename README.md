@@ -9,3 +9,4 @@ My version of react app boilerplate.
 3. ESLint
 4. Babel 7
 5. Prettier
+6. Material-UI
