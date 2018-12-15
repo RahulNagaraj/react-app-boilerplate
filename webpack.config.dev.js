@@ -10,7 +10,7 @@ module.exports = {
     hot: true, // Hot Module Replacement
     port: 8080 // Port to run on
   },
-  devTool: 'cheap-eval-source-map',
+  devTool: 'cheap-eval-source-map', // Controls if and how source maps are generated
   entry: {
     app: './src/index.js' // Entry point to the app
   },
@@ -41,6 +41,15 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
+  stats: {
+    all: false, // Fallback value for stats options when an option is not defined
+    errors: true, // Add errors
+    errorDetails: true, // Add details to errors
+    colors: true, // `webpack --colors` equivalent
+    modules: true, // Add built modules information
+    maxModules: 0, // Set the maximum number of modules to be shown
+    warnings: true // Add warnings
+  },
   output: {
     path: path.resolve(__dirname, 'dist'), // Output to /dist
     filename: '[name].bundle.js' // Output filename - index.bundle.js
