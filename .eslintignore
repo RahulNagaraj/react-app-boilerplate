@@ -21,4 +21,4 @@ bower_components
 /dist
 
 # Webpack config
-webpack.dev.config.*
+webpack.config.*

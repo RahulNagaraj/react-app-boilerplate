@@ -10,6 +10,7 @@ module.exports = {
     hot: true, // Hot Module Replacement
     port: 8080 // Port to run on
   },
+  devTool: 'cheap-eval-source-map',
   entry: {
     app: './src/index.js' // Entry point to the app
   },
